@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Pridi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+:root{
+    --Primary: #0d6efd;
+    --Secondary:#6c757d;
+    --Success: #28a745;
+    --Danger: #dc3545;
+    --Warning: #ffc107;
+    --Info: #17a2b8;
+    --Light: #f8f9fa;
+    --Dark: #343a40;
+    --box-shadow: 0, 1, 3, rgba(0, 0, 0, .12);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light);
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    /* ระยะห่างตัวอักษร */
+    letter-spacing: 2px;
+}
+
+h3 {
+    /* text-decoration: underline; */
+    border-bottom: 1px solid #bbb;
+    margin: 40px 0 0;
+    padding-bottom: 10px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.container {
+    margin: 30px;
+    width: 500px;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.income-expese-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.income-expese-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.income-expese-container > div:first-of-type {
+    border-right: 2px solid #dedede;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.money.plus {
+    color: var(--Success);
+}
+
+.money.minus {
+    color: var(--Danger)
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type='text'], input[type='number'] {
+    border: 1px solid #dedede;
+    display: block;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--Primary);
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: var(--box-shadow);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.list li {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 10px 0;
+}
+
+.list li.plus{
+    border-right: 5px solid var(--Success);
+}
+
+.list li.minus{
+    border-right: 5px solid var(--Danger);
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: var(--Danger);
+    color: var(--Light);
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* !!!!! */
+    transform: translate(-100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* !!!! */
+.list li:hover .delete-btn{
+    opacity: 1;
+}
+
+.btn, .delete-btn {
+    outline: 0;
+}

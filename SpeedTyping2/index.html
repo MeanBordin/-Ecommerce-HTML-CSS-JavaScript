@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="setting">
+        <h3>Select mode : </h3>
+        <div class="form-level" id="form-level">
+            <select id="setting-level" class="setting-level">
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+    <button class="btn-setting" id="btn-setting">
+        <i class="bi bi-gear-fill" ></i>
+    </button>
+
+    <div class="container">
+        <h1>Speed Typing</h1>
+        <div class="display-time-point" id="display-time-point">
+            <p id="show-time"> Second</p>
+            <p id="show-score">0 Point</p>
+        </div>
+        <div class="display">Display</div>
+        <input  id="input-word" type="text" placeholder="Input your word" autofocus>
+        <!-- gameover -->
+        <div class="gameOver"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header">โปรแกรมบัญชี รายรับ-รายจ่าย</h1>
+    <div class="container">
+        <h4>ยอดคงเหลือ (บาท)</h4>
+        <h1 class="balance">฿0.00</h1>
+        <!-- รายรับ รายจ่าย -->
+        <div class="income-expese-container">
+            <div class="income" id="income">
+                <h4>รายรับ</h4>
+                <p id="money-plus" class="money plus">
+                    ฿5000
+                </p>
+            </div>
+            <div class="expese" id="expese">
+                <h4>รายจ่าย</h4>
+                <p id="money-minus" class="money minus">
+                    ฿200
+                </p>
+            </div>
+        </div>
+        <h3>ประวัติธุรกรรม</h3>
+        <ul id="list" class="list">
+            <!-- <li class="plus">ค่าไฟ<span>฿500</span>
+                <button class="delete-btn" id="delete-btn">X</button>
+            </li>
+            <li class="minus">ค่าไฟ<span>฿500</span>
+                <button class="delete-btn" id="delete-btn">X</button>
+            </li> -->
+        </ul>
+        <h3>เพิ่มธุรกรรม</h3>
+        <form id="form">
+            <div class="form-control" id="form-control">
+                <label>ชื่อรายการ</label>
+                <input type="text" id="text" placeholder="ระบุชื่อธุรกรรม">
+            </div>
+            <div class="form-control" id="form-control">
+                <label>จำนวนเงิน</label><br>
+                (+ รายรับ, -รายจ่าย)
+                <input type="number" id="amount" placeholder="จำนวนเงิน">
+            </div>
+            <button class="btn" id="btn">เพิ่มธุรกรรม</button>
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
