@@ -709,3 +709,27 @@ footer a:hover {
         width: 70%;
     }
 }
+
+/* @media (max-width: 477px) {
+    #navbar {
+        padding: 10px 30px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 65%;
+    }
+
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #feature .fe-box{
+        width: 145px;
+        margin: 0 0 15px 0;
+    }
+} */

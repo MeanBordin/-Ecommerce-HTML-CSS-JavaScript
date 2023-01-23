@@ -21,6 +21,8 @@
     font-family: 'Kanit', sans-serif;
     box-sizing: border-box;
     /* ทำให้เว็บไม่ยืดในแนวนอน */
+    scroll-behavior: smooth;
+    /* ทำให้ตอนเรา scoll เมาส์ไม่สดุด */
 }
 
 body {
@@ -153,4 +155,34 @@ input:checked + .slider::before {
     font-size: 30px;
     margin-right: 10px;
     margin-left: 0px;
+}
+
+.fab {
+    font-size: 100px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.fab:hover {
+    color: var(--primary-color);
+}
+
+.project-container {
+    display: flex;
+}
+
+.image-container {
+    border: 1px solid var(--text-color-second);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 10px 20px;
+    margin: 50px 40px 0 0px; /* top right bottom left */
+    text-align: center;
+    background: var(--background);
+    width: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
 }

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ffa4f9, #cc85fe);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    margin: 20vh auto;
+    padding: 40px;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #b288ff;
+    box-shadow: 0 0 10px #b68eff;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #cc85fe;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff65f5, #cc85fe);
+}
+
+button:focus {
+    outline: none;
+}

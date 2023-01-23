@@ -15,24 +15,41 @@ function calculateBmi() {
     let hg = height.value
     let bmi = 0;
 
-    hg = Math.pow(( (hg * 100) /100 ), 2)
-    bmi = (wg / hg)*10000
-
-    // display
-    display1.innerHTML = bmi
+    hg = Math.pow(((hg * 100) / 100), 2)
+    bmi = (wg / hg) * 10000
 
     if (bmi > 30.0) {
-        display2.innerText = 'อ้วนมาก'
-    } 
+        Swal.fire({
+            icon: 'warning',
+            title: 'ผลการคำนวณ',
+            text: 'อ้วนมาก'
+
+        })
+    }
     else if (bmi >= 25.0 && bmi <= 29.9) {
-        display2.innerText = 'อ้วน'
+        Swal.fire({
+            icon: 'warning',
+            title: 'ผลการคำนวณ',
+            text: 'อ้วน'
+        })
     }
     else if (bmi >= 18.6 && bmi <= 24.0) {
-        display2.innerText = 'อ้วนน้ำหนักปกติ'
+        Swal.fire({
+            icon: 'success',
+            title: 'ผลการคำนวณ',
+            text: 'น้ำหนักปกติ'
+        })
     }
     else {
-        display2.innerText = 'ผอมเกินไป'
+        Swal.fire({
+            icon: 'warning',
+            title: 'ผลการคำนวณ',
+            text: 'ผอมเกินไป'
+        })
     }
-//    console.log(`W = ${wg} H = ${hg} ${bmi}`);
+
+    weight.value = ''
+    height.value = ''
 }
- 
+
+    //    console.log(`W = ${wg} H = ${hg} ${bmi}`);

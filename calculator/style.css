@@ -1,0 +1,94 @@
+:root {
+    --equal-color:rgb(61, 122, 255);
+    --operator-color:rgba(169, 169, 247, 0.498);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.calculator {
+    background: white;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.calculator-display {
+    background-color: rgba(232, 231, 231, 0.783);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-style: 45px;
+    font-weight: 100;
+    overflow-x: auto; 
+    /* เพิ่ม scoll bar ใน แกน x*/
+}
+
+.calculator-button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1fr ให้มี 1 แถวถูกกินพื้นที่ */
+    /* แบ่งเป็น 4 แถว */
+
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.equal {
+    grid-column: -2; /*กินพื้นที่ไป 2 column*/
+    grid-row: 2/span 4; /*กินพื้นที่ไปจนถึงแถวที่ 2 (กำหนดให้กินไป 4 แถว)*/
+}
+
+button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+}
+
+button:active {
+    transform: scale(0.8);
+    /* transform: translateY(5px); */ 
+    /* กดแล้วจะเคลื่อนที่ในแกน Y */
+}
+
+button:hover {
+    /* background-color: rgba(203, 254, 178, 0.498); */
+    filter: brightness(110%);
+}
+
+.operator {
+    background-color: var(--operator-color);
+}
+
+.equal {
+    background-color: var(--equal-color);
+}
+
+.clear-btn {
+    background-color: rgb(255, 210, 11);
+}
+
+@media screen and (max-width:600px) {
+     .calculator{
+        width: 95%;
+     }
+}
